@@ -6,6 +6,7 @@ class CreateBikes < ActiveRecord::Migration[7.0]
       t.string :photo
       t.integer :power
       t.integer :weight
+      t.integer :price
 
       t.timestamps
     end

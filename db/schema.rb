@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_23_224249) do
     t.string "photo"
     t.integer "power"
     t.integer "weight"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
