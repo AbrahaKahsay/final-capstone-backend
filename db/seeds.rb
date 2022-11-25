@@ -59,4 +59,4 @@ Bike.create([
   },
 ])
 
-Reservation.create(user_id: User.first, bike_id: Bike.first, date: "27/06/2023", location: "São Paulo - BR")
+Reservation.create(user_id: User.first.id, bike_id: Bike.first.id, date: "27/06/2023", location: "São Paulo - BR")
