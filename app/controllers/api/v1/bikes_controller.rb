@@ -4,4 +4,24 @@ class Api::V1::BikesController < ApplicationController
     @bikes = Bike.all
     render json: @bikes
   end
+
+  def show
+    @bike = Bike.find(params[:id])
+    render json: @bike
+  end
+
+  def create
+    @bike = Bike.new(bike_params)
+    if @bike.save
+      render json: @bike
+    else
+      render json: @bike.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def bike_params
+    params.require(:bike).permit(:brand, :model, :photo, :power, :weight,:price, :user_id)
+  end
 end

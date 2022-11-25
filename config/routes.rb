@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :bikes
-      resources :reservations
+      resources :users,except: [:update] do 
+        resources :reservations, except: [:update]
+        resources :bikes, only: [:create]
+      end
+      resources :bikes, except: [:update, :create]
     end
   end 
 end
