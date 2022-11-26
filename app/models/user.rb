@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :reservations
 
-  validates :name, presence: true, length: { minimum: 3 }
-  validates :name, uniqueness: true, on: :create
+  validates :name, presence: true, uniqueness: true, length: { in: 6..20 }
 end
