@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 
+  # post api/v1/users => params should be on body
   def create 
     user = User.new(user_params)
     
@@ -10,9 +11,20 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  # get api/v1/users
   def index
+    users = User.all
+    render json: users
+  end
+
+  # get api/v1/login
+  def login
     user = User.find_by(name: params[:name])
-    render json: user
+    unless user.nil?
+      render json: user
+    else
+      render json: 'This user is not in database'
+    end
   end
 
   private
