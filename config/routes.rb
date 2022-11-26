@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :users,except: [:update] do 
+      resources :users, only: [:index, :create] do 
         resources :reservations, except: [:update]
         resources :bikes, only: [:create]
       end
