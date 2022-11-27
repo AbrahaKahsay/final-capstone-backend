@@ -7,10 +7,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :create] do 
         resources :reservations, except: [:update]
-        resources :bikes, only: [:create]
       end
       get 'login', to: 'users#login'
-      resources :bikes, except: [:update, :create]
+      resources :bikes, except: [:update]
     end
   end 
 end
