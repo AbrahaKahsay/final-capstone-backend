@@ -3,11 +3,11 @@ RSpec.describe Reservation, type: :model do
   before :each do
     @user = User.create(name: 'Test User')
     @bike = Bike.create(brand: 'testing bike brand...',
-      model: 'testing bike model...',
-      photo: 'photo.jpg',
-      power: 11_111,
-      weight: 11_111,
-      price: 11_111)
+                        model: 'testing bike model...',
+                        photo: 'photo.jpg',
+                        power: 11_111,
+                        weight: 11_111,
+                        price: 11_111)
     @reservation = Reservation.new(user_id: @user.id, bike_id: @bike.id, date: '27/06/2023', location: 'São Paulo - BR')
     @reservation.save
   end
