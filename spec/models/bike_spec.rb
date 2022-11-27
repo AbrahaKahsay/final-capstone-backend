@@ -19,11 +19,11 @@ RSpec.describe Bike, type: :model do
   end
 
   it 'should not be invalid without a brand' do
-    @bike.price = nil
+    @bike.brand = nil
     expect(@bike).to_not be_valid
   end
   it 'should not be invalid without a price' do
-    @bike.model = nil
+    @bike.price = nil
     expect(@bike).to_not be_valid
   end
   it 'should not be invalid without a photo' do
