@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :bikes
-      resources :reservations
+      resources :users, only: [:index, :create] do 
+        resources :reservations, except: [:update]
+      end
+      get 'login', to: 'users#login'
+      resources :bikes, except: [:update]
     end
   end 
 end
