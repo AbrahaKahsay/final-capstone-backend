@@ -98,11 +98,6 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.11.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -141,6 +136,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4)
@@ -214,9 +211,9 @@ DEPENDENCIES
   database_cleaner
   debug
   dotenv-rails
-  factory_girl_rails
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.4)
   rspec-rails (~> 6.0.0)
   tzinfo-data
