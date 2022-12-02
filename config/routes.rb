@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :create] do 
         resources :reservations, except: [:update]
       end
-      get 'login', to: 'users#login'
+      post 'login', to: 'users#login'
       resources :bikes, except: [:update]
     end
   end 

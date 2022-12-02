@@ -16,7 +16,7 @@ class Api::V1::UsersController < ApplicationController
     render json: users
   end
 
-  # get api/v1/login
+  # post api/v1/login
   def login
     user = User.find_by(name: params[:name])
     if user.nil?
