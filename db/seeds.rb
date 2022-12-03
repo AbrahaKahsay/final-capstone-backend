@@ -48,7 +48,7 @@ Bike.create([
   {
     brand: "Ducati",
     model: "Streetfighter V4 Lamborghini",
-    photo: "",
+    photo: "https://images.ctfassets.net/x7j9qwvpvr5s/5Gi60AYlhTtVpsZL28WDki/d2881859b17b558aabc25653850f2f04/SFV4_LAMBO_SPIN_00.png?w=1920&fm=webp&q=95",
     power: 208,
     weight: 178,
     price: 310,
