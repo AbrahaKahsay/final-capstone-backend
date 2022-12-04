@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
   # post api/v1/users => params should be on body
   def create
     user = User.new(user_params)
-
+    p user
     if user.save
       render json: user, status: :ok
     else
@@ -16,11 +16,13 @@ class Api::V1::UsersController < ApplicationController
     render json: users
   end
 
-  # post api/v1/login
+  # get api/v1/login
   def login
     user = User.find_by(name: params[:name])
     if user.nil?
-      render json: 'This user is not in database'
+     render json: { status: 204,
+        message: 'logged out successfully'
+      }, status: :no_content
     else
       render json: user
     end
