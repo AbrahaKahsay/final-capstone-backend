@@ -20,9 +20,8 @@ class Api::V1::UsersController < ApplicationController
   def login
     user = User.find_by(name: params[:name])
     if user.nil?
-     render json: { status: 204,
-        message: 'logged out successfully'
-      }, status: :no_content
+      render json: { status: 204,
+                     message: 'logged out successfully' }, status: :no_content
     else
       render json: user
     end
