@@ -15,6 +15,7 @@
 <hr>
 
  ## API Documentation
+ ![](./API.JPG)
 
 - [Final Capstone Database](#)
 <hr>
