@@ -43,6 +43,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -51,3 +52,5 @@ group :development do
 end
 
 gem 'dotenv-rails'
+
+gem 'rswag'
