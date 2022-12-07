@@ -1,6 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
   # get /api/v1/users/1/reservations
   def index
+    p params[:user_id]
     reservations = Reservation.where(user_id: params[:user_id])
     render json: reservations, status: :ok
   end
@@ -20,6 +21,11 @@ class Api::V1::ReservationsController < ApplicationController
   def show
     reservation = Reservation.where(id: params[:id], user_id: params[:user_id])
     render json: reservation, status: :ok
+  end
+
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
   end
 
   private
