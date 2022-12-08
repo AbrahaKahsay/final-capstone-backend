@@ -25,6 +25,15 @@
 
 <hr>
 
+ ## Kanban board
+ - [Project link](https://github.com/AbrahaKahsay/final-capstone-backend/projects/1)
+ 
+ ![](https://user-images.githubusercontent.com/84423749/203654321-8fa0e497-98f6-407c-835b-d7dc7cec9f42.png)
+
+ Our group remained the same throughout the whole project.
+
+<hr>
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
