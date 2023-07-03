@@ -17,7 +17,7 @@
  ## API Documentation
  ![](./API.JPG)
 
-- [Final Capstone Database](https://bikes-db.onrender.com/api-docs/index.html)
+- [Final Capstone Database](https://ducati-rentals-3bu2.onrender.com/api-docs/index.html)
 <hr>
 
  ## SQL schema
